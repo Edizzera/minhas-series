@@ -9,15 +9,20 @@ const[open, setOpen] = useState(false)
   }
 return(
 <Navbar color ='light' light expand='md'>
+    <div className='container'>
         <NavbarBrand tag={ Link } to='/'>Minhas séries</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={true} navbar></Collapse>
           <Nav className='ml-auto' navbar>
+          <NavItem>
+              <NavLink tag={Link} to ='/series'>Séries</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink tag={Link} to ='/generos'>Gêneros</NavLink>
             </NavItem>
 
           </Nav>
+          </div>
       </Navbar>
 )
 }
